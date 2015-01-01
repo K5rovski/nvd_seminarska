@@ -65,7 +65,7 @@ makeGraph=function(){
 				  markerType:"none",
 				   showInLegend: true, 
 					name: cityname+'\t',
-					visible: (cityname==='Skopje' || cityname==='London')? true : false
+					visible: (cityname==='Skopje' || cityname==='London')? true : false,
                   dataPoints: cityReadings});
 		});
 		
