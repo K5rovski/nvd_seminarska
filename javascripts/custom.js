@@ -1,5 +1,5 @@
 var JFiles={};
-var Names=['Skopje','Paris','London','Hongkong','Amsterdam'.'Zagreb'];
+var Names=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb'];
 var Particle='PM10';
 	var JDataList=[];
 loadData=function(){
