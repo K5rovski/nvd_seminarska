@@ -1,5 +1,5 @@
 var JFiles={};
-var Names=['Skopje','Paris','London','Hongkong'];
+var Names=['Skopje','Paris','London','Hongkong','Amsterdam'];
 var Particle='PM10';
 	var JDataList=[];
 loadData=function(){
@@ -65,7 +65,7 @@ makeGraph=function(){
 				  markerType:"none",
 				   showInLegend: true, 
 					name: cityname+'\t',
-					visible: (cityname==='Skopje' || cityname==='London')? true : false,
+					visible: (cityname==='Skopje' || cityname==='Paris')? true : false,
                   dataPoints: cityReadings});
 		});
 		
