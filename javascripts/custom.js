@@ -64,7 +64,8 @@ makeGraph=function(){
 		JDataList.push({type: "line",
 				  markerType:"none",
 				   showInLegend: true, 
-					name: cityname+' ',
+					name: cityname+'\t',
+					visible: (cityname==='Skopje' || cityname==='London')? true : false
                   dataPoints: cityReadings});
 		});
 		
