@@ -1,5 +1,5 @@
 var JFiles={};
-var Names=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb','Temp'];
+var Names=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb'];//'Temp'];
 var Particle='PM10';
 	var JDataList=[];
 loadData=function(){
@@ -92,7 +92,11 @@ makeGraph=function(){
 						chart.render();
 					}
 				},
-              data: JDataList
+              data: JDataList,
+			  axisY:{
+				  suffix: " ug/m3",
+				  title:'PM10 Pollution'
+					}    
           });
 
           chart.render();
