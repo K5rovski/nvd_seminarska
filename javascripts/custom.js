@@ -1,6 +1,6 @@
 var JFiles={};
 var CityNames=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb'];//'Temp'];
-var OtherNames=['SkopjeByMonths.json']
+var OtherNames=['SkopjeByMonths.json','ByDays.json']
 var Particle='PM10';
 	var JDataList=[];
 loadData=function(){
@@ -26,6 +26,9 @@ loadData=function(){
 	  }
 	  else if (datai["type"]=="Doughnut"){
 	  makeDoughnut(datai["data"]);
+	  }
+	  else if (datai["type"]=="average"){
+	  makeAverage(datai.data)
 	  }
     }
 	

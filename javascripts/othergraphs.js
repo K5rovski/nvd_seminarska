@@ -49,3 +49,46 @@ var middle=new Date().getTime();
 		$('#TimeSpent2').text('Time loading data='+(middle-start)+
 		' mills. Time showing graph='+(end-middle)+' mils.');
 }
+
+makeAverage=function(Data){
+	 var start = new Date().getTime(); //Time Start
+
+	for (var i=0;i<Data.length;i++){
+		Data[i]["label"]=Data[i]["city"];
+		Data[i]["y"]=+(Data[i]["Average"]).toFixed(2);
+		Data[i]["x"]=(i+1)*10;
+		}
+
+var middle=new Date().getTime();
+         
+		 var chart = new CanvasJS.Chart("chartContainer3", 
+		  {
+      title:{
+        text: "Daily Average",
+        fontFamily: "Impact",
+        fontWeight: "normal"
+      },
+
+     
+      data: [
+      {
+        //startAngle: 45,
+       
+       type: "column",
+    //   showInLegend: true,
+       dataPoints: Data,
+	   axisY:{
+				  suffix: "ug/m3"
+					}    
+     }
+     ]
+   });
+
+    chart.render();
+	
+		// Time end
+		var end = new Date().getTime();
+		
+		$('#TimeSpent3').text('Time loading data='+(middle-start)+
+		' mills. Time showing graph='+(end-middle)+' mils.');
+}
