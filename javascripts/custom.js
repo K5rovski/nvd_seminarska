@@ -29,7 +29,10 @@ loadData=function(){
 	  }
 	  else if (datai["type"]=="average"){
 	  makeAverage(datai.data)
+	  makeColumn(datai.data,"Max","MaxChart","#MaxTime")
+	   makeColumn(datai.data,"Min","MinChart","#MinTime")
 	  }
+	
     }
 	
 	makeGraph();

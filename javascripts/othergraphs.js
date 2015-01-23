@@ -26,6 +26,7 @@ var middle=new Date().getTime();
       data: [
       {
         //startAngle: 45,
+		toolTipContent: "{y} ug/m3",  
        indexLabelFontSize: 20,
        indexLabelFontFamily: "Garamond",
        indexLabelFontColor: "darkgrey",
@@ -33,10 +34,7 @@ var middle=new Date().getTime();
        indexLabelPlacement: "outside",
        type: "doughnut",
     //   showInLegend: true,
-       dataPoints: Data,
-	   axisY:{
-				  suffix: "ug/m3"
-					}    
+       dataPoints: Data
      }
      ]
    });
@@ -81,8 +79,8 @@ var middle=new Date().getTime();
       data: [
       {
         //startAngle: 45,
-       
-       type: "column",
+       		toolTipContent: "{y} ug/m3",  
+			type: "column",
     //   showInLegend: true,
        dataPoints: Data      
      }
@@ -95,5 +93,55 @@ var middle=new Date().getTime();
 		var end = new Date().getTime();
 		
 		$('#TimeSpent3').text('Time loading data='+(middle-start)+
+		' mills. Time showing graph='+(end-middle)+' mils.');
+}
+makeColumn=function(Data,Mpref,chartdiv,timediv){
+	 var start = new Date().getTime(); //Time Start
+
+	for (var i=0;i<Data.length;i++){
+		Data[i]["label"]=Data[i]["city"];
+		Data[i]["y"]=+(Data[i][Mpref]).toFixed(2);
+		var dstr=Data[i][Mpref+"Day"].split('_');
+		var ddate=new Date(dstr);
+		Data[i]["printday"]=ddate.toDateString();
+	//	Data[i]["x"]=(i+1)*10;
+		}
+
+var middle=new Date().getTime();
+         console.log(Data);
+		 var chart = new CanvasJS.Chart(chartdiv, 
+		  {
+      title:{
+        text: "Daily "+Mpref+" Value",
+        fontFamily: "Impact",
+        fontWeight: "normal"
+      },
+	
+	   axisY:{
+				  suffix: "ug/m3",
+				  title:'PM10 Pollution'
+					} ,
+     axisX:{
+       title: "axisX Title",
+       gridThickness: 1,
+       tickLength: 10
+      },
+      data: [
+      {
+        //startAngle: 45,
+       		toolTipContent: "{printday}<br>{y} ug/m3 ",  
+       type: "column",
+    //   showInLegend: true,
+       dataPoints: Data      
+     }
+     ]
+   });
+
+    chart.render();
+	
+		// Time end
+		var end = new Date().getTime();
+		
+		$(timediv).text('Time loading data='+(middle-start)+
 		' mills. Time showing graph='+(end-middle)+' mils.');
 }
