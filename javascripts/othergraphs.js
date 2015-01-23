@@ -97,13 +97,14 @@ var middle=new Date().getTime();
 }
 makeColumn=function(Data,Mpref,chartdiv,timediv){
 	 var start = new Date().getTime(); //Time Start
-
+	var newD=[];
 	for (var i=0;i<Data.length;i++){
-		Data[i]["label"]=Data[i]["city"];
-		Data[i]["y"]=+(Data[i][Mpref]).toFixed(2);
+		newD.push({})
+		newD[i]["label"]=Data[i]["city"];
+		newD[i]["y"]=+(Data[i][Mpref]).toFixed(2);
 		var dstr=Data[i][Mpref+"Day"].split('_');
 		var ddate=new Date(dstr);
-		Data[i]["printday"]=ddate.toDateString();
+		newD[i]["printday"]=ddate.toDateString();
 	//	Data[i]["x"]=(i+1)*10;
 		}
 
@@ -132,7 +133,7 @@ var middle=new Date().getTime();
        		toolTipContent: "{printday}<br>{y} ug/m3 ",  
        type: "column",
     //   showInLegend: true,
-       dataPoints: Data      
+       dataPoints: newD      
      }
      ]
    });
