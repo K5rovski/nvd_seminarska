@@ -56,7 +56,7 @@ makeAverage=function(Data){
 	for (var i=0;i<Data.length;i++){
 		Data[i]["label"]=Data[i]["city"];
 		Data[i]["y"]=+(Data[i]["Average"]).toFixed(2);
-		Data[i]["x"]=(i+1)*10;
+	//	Data[i]["x"]=(i+1)*10;
 		}
 
 var middle=new Date().getTime();
