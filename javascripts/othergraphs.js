@@ -72,7 +72,7 @@ var middle=new Date().getTime();
 				  title:'PM10 Pollution'
 					} ,
      axisX:{
-       title: "axisX Title",
+     //  title: "axisX Title",
        gridThickness: 1,
        tickLength: 10
       },
@@ -123,7 +123,7 @@ var middle=new Date().getTime();
 				  title:'PM10 Pollution'
 					} ,
      axisX:{
-       title: "axisX Title",
+       //title: "axisX Title",
        gridThickness: 1,
        tickLength: 10
       },
