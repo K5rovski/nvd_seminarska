@@ -1,11 +1,15 @@
 var JFiles={};
-var Names=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb'];//'Temp'];
+var CityNames=['Skopje','Paris','London','Hongkong','Amsterdam','Zagreb'];//'Temp'];
+var OtherNames=['SkopjeByMonths.json']
 var Particle='PM10';
 	var JDataList=[];
 loadData=function(){
 		 var funcs=[];
-		for(var i=0;i<Names.length;i++){
-		funcs.push($.getJSON(Names[i]+Particle+'.json'));
+		for(var i=0;i<CityNames.length;i++){
+		funcs.push($.getJSON(CityNames[i]+Particle+'.json'));
+		}
+		for(var i=0;i<OtherNames.length;i++){
+		funcs.push($.getJSON(OtherNames[i]));
 		}
 	$.when.apply($, funcs).done(function(){
     // This callback will be called with multiple arguments,
@@ -15,9 +19,14 @@ loadData=function(){
     // Let's map the arguments into an object, for ease of use
     
     for(var i = 0, len = arguments.length; i < len; i++){
-		var name=arguments[i][0]['2013_1_22_1'].Station;
-	JFiles[name.slice(0,name.search('_'))]=arguments[i][0];
-	  
+		var datai=arguments[i][0];
+		if (!datai.hasOwnProperty("type")){
+		var name=datai['2013_1_22_1'].Station;
+	JFiles[name.slice(0,name.search('_'))]=datai;
+	  }
+	  else if (datai["type"]=="Doughnut"){
+	  makeDoughnut(datai["data"]);
+	  }
     }
 	
 	makeGraph();
@@ -94,7 +103,7 @@ makeGraph=function(){
 				},
               data: JDataList,
 			  axisY:{
-				  suffix: " ug/m3",
+				  suffix: "ug/m3",
 				  title:'PM10 Pollution'
 					}    
           });
