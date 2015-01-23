@@ -68,19 +68,23 @@ var middle=new Date().getTime();
         fontFamily: "Impact",
         fontWeight: "normal"
       },
-
-     
+	
+	   axisY:{
+				  suffix: "ug/m3",
+				  title:'PM10 Pollution'
+					} ,
+     axisX:{
+       title: "axisX Title",
+       gridThickness: 1,
+       tickLength: 10
+      },
       data: [
       {
         //startAngle: 45,
        
        type: "column",
     //   showInLegend: true,
-       dataPoints: Data,
-	   axisY:{
-				  suffix: "ug/m3",
-				  title:'PM10 Pollution'
-					}       
+       dataPoints: Data      
      }
      ]
    });
