@@ -26,7 +26,7 @@ var middle=new Date().getTime();
       data: [
       {
         //startAngle: 45,
-		toolTipContent: "{y} ug/m3",  
+		toolTipContent: "{indexLabel} <br> {y} ug/m3",  
        indexLabelFontSize: 20,
        indexLabelFontFamily: "Garamond",
        indexLabelFontColor: "darkgrey",
