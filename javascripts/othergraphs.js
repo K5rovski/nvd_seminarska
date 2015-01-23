@@ -3,7 +3,7 @@ makeDoughnut=function(Data){
 
 	for (var i=0;i<Data.length;i++){
 		Data[i]["indexLabel"]=Data[i]["printmonth"];
-		Data[i]["y"]=Data[i]["averageval"];
+		Data[i]["y"]=+(Data[i]["averageval"]).toFixed(2);
 		}
 
 var middle=new Date().getTime();
@@ -30,7 +30,10 @@ var middle=new Date().getTime();
        indexLabelPlacement: "outside",
        type: "doughnut",
     //   showInLegend: true,
-       dataPoints: Data
+       dataPoints: Data,
+	   axisY:{
+				  suffix: "ug/m3"
+					}    
      }
      ]
    });
