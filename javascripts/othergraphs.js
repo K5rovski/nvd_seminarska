@@ -4,6 +4,9 @@ makeDoughnut=function(Data){
 	for (var i=0;i<Data.length;i++){
 		Data[i]["indexLabel"]=Data[i]["printmonth"];
 		Data[i]["y"]=+(Data[i]["averageval"]).toFixed(2);
+		if (i==11){
+		Data[i]["color"]="Indigo";
+		}
 		}
 
 var middle=new Date().getTime();
