@@ -67,7 +67,7 @@ makeGraph=function(){
 	var itemKey=new Date(d.getTime());
 	if (t!=null){
 	t['x']=itemKey
-	t['y']=t['Reading'];}
+	t['y']=+(t['Reading']).toFixed(2);}
 	else {
 	t={'x':itemKey,'y':null};
 	}
