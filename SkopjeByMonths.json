@@ -1,0 +1,65 @@
+{
+ "type": "Doughnut",
+ "data": [
+  {
+   "monvalue": 1,
+   "printmonth": "Jan",
+   "averageval": 114.86269108409138
+  },
+  {
+   "monvalue": 2,
+   "printmonth": "Feb",
+   "averageval": 67.73864037724702
+  },
+  {
+   "monvalue": 3,
+   "printmonth": "Mar",
+   "averageval": 46.83823149411843
+  },
+  {
+   "monvalue": 4,
+   "printmonth": "Apr",
+   "averageval": 52.40111296285556
+  },
+  {
+   "monvalue": 5,
+   "printmonth": "May",
+   "averageval": 40.80679256259005
+  },
+  {
+   "monvalue": 6,
+   "printmonth": "Jun",
+   "averageval": 36.12477893539861
+  },
+  {
+   "monvalue": 7,
+   "printmonth": "Jul",
+   "averageval": 40.590398073422044
+  },
+  {
+   "monvalue": 8,
+   "printmonth": "Aug",
+   "averageval": 60.01673319890725
+  },
+  {
+   "monvalue": 9,
+   "printmonth": "Sep",
+   "averageval": 41.46511944443888
+  },
+  {
+   "monvalue": 10,
+   "printmonth": "Oct",
+   "averageval": 65.89025918465053
+  },
+  {
+   "monvalue": 11,
+   "printmonth": "Nov",
+   "averageval": 88.84062615743056
+  },
+  {
+   "monvalue": 12,
+   "printmonth": "Dec",
+   "averageval": 236.63351254481185
+  }
+ ]
+}
