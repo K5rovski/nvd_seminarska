@@ -60,7 +60,7 @@ makeAverage=function(Data){
 		}
 
 var middle=new Date().getTime();
-         
+         console.log(Data);
 		 var chart = new CanvasJS.Chart("chartContainer3", 
 		  {
       title:{
@@ -78,8 +78,9 @@ var middle=new Date().getTime();
     //   showInLegend: true,
        dataPoints: Data,
 	   axisY:{
-				  suffix: "ug/m3"
-					}    
+				  suffix: "ug/m3",
+				  title:'PM10 Pollution'
+					}       
      }
      ]
    });
