@@ -96,7 +96,7 @@ var middle=new Date().getTime();
 		' mills. Time showing graph='+(end-middle)+' mils.');
 }
 makeColumn=function(Data,Mpref,chartdiv,timediv){
-	 var start = new Date().getTime(); //Time Start
+	 var start = new Date().getTime();  //Time Start
 	var newD=[];
 	for (var i=0;i<Data.length;i++){
 		newD.push({})
