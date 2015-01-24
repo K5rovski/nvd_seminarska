@@ -28,9 +28,10 @@ loadData=function(){
 	  makeDoughnut(datai["data"]);
 	  }
 	  else if (datai["type"]=="average"){
-	  makeAverage(datai.data)
-	  makeColumn(datai.data,"Max","MaxChart","#MaxTime")
-	   makeColumn(datai.data,"Min","MinChart","#MinTime")
+	  makeAverage(datai.data);
+	  makeColumn(datai.data,"Max","MaxChart","#MaxTime");
+	   makeColumn(datai.data,"Min","MinChart","#MinTime");
+	  makeBubble(datai.data,"BubbleChart","#BubbleTime");
 	  }
 	
     }
