@@ -96,7 +96,7 @@ var middle=new Date().getTime();
 		' mills. Time showing graph='+(end-middle)+' mils.');
 }
 makeColumn=function(Data,Mpref,chartdiv,timediv){
-	 var start = new Date().getTime(); //Time Start
+	 var start = new Date().getTime();  //Time Start
 	var newD=[];
 	for (var i=0;i<Data.length;i++){
 		newD.push({})
@@ -153,11 +153,7 @@ makeBubble=function(Data,chartdiv,timediv){
 	for (var i=0;i<Data.length;i++){
 		newD.push({})
 		newD[i]["city"]=Data[i]["city"];
-<<<<<<< HEAD
 		newD[i]["z"]=+(Data[i]["Average"]).toFixed(2);
-=======
-		newD[i]["z"]=+(Data[i][Mpref]).toFixed(2);
->>>>>>> 8630b7b58dd69169ff4d994ea019604cf94c346e
 		newD[i]["y"]=Data[i]["GDP"];
 		newD[i]["x"]=Data[i]["Pop_Density"];
 	//	var dstr=Data[i][Mpref+"Day"].split('_');
