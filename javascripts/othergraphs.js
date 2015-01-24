@@ -178,11 +178,12 @@ var middle=new Date().getTime();
       },
 	   axisX:{
 		title:'GDP/capita of home country',
-		minimum:-2000,
+		minimum:2000,
 		maximum:57000
 	} ,
      axisY:{
        title: "Population Density",
+	   minimum:-1000
   //     gridThickness: 1,
     //   tickLength: 10
       },
