@@ -154,8 +154,8 @@ makeBubble=function(Data,chartdiv,timediv){
 		newD.push({})
 		newD[i]["city"]=Data[i]["city"];
 		newD[i]["z"]=+(Data[i]["Average"]).toFixed(2);
-		newD[i]["y"]=Data[i]["GDP"];
-		newD[i]["x"]=Data[i]["Pop_Density"];
+		newD[i]["x"]=Data[i]["GDP"];
+		newD[i]["y"]=Data[i]["Pop_Density"];
 	//	var dstr=Data[i][Mpref+"Day"].split('_');
 	//	var ddate=new Date(dstr);
 	//	newD[i]["printday"]=ddate.toDateString();
