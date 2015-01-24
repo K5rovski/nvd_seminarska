@@ -176,10 +176,12 @@ var middle=new Date().getTime();
         horizontalAlign: "left"
 
       },
-	   axisY:{
-		title:'GDP/capita of home country'
+	   axisX:{
+		title:'GDP/capita of home country',
+		minimum:-2000,
+		maximum:57000
 	} ,
-     axisX:{
+     axisY:{
        title: "Population Density",
   //     gridThickness: 1,
     //   tickLength: 10
@@ -188,7 +190,7 @@ var middle=new Date().getTime();
       {
       legendText: "Size of Bubble Represents Average Daily PM10 Pollution",
       toolTipContent: "<strong>{city}</strong> <hr/>"+
-	  "GDP: {y}<br/> Population Density: {x} /km2<br/> Avg. Daily PM10: {z} ug/m3",
+	  "GDP: {x}<br/> Population Density: {y} /km2<br/> Avg. Daily PM10: {z} ug/m3",
 	  type: "bubble",
        showInLegend: true,
        legendMarkerType:"circle",
