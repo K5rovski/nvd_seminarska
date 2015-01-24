@@ -183,7 +183,7 @@ var middle=new Date().getTime();
 	} ,
      axisY:{
        title: "Population Density",
-	   minimum:-1000
+	   minimum:-1500
   //     gridThickness: 1,
     //   tickLength: 10
       },
