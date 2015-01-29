@@ -94,6 +94,8 @@ makeGraph=function(){
               title:{
                   text: "Several Cities"              
              },
+			  exportEnabled: true,
+
 		legend: {
 					cursor: "pointer",
 					itemclick: function (e) {

@@ -18,7 +18,7 @@ var middle=new Date().getTime();
         fontFamily: "Impact",
         fontWeight: "normal"
       },
-
+	 exportEnabled: true,
       legend:{
         verticalAlign: "bottom",
         horizontalAlign: "center"
@@ -66,7 +66,8 @@ var middle=new Date().getTime();
         fontFamily: "Impact",
         fontWeight: "normal"
       },
-	
+	 exportEnabled: true,
+
 	   axisY:{
 				  suffix: "ug/m3",
 				  title:'PM10 Pollution'
@@ -117,7 +118,8 @@ var middle=new Date().getTime();
         fontFamily: "Impact",
         fontWeight: "normal"
       },
-	
+	 exportEnabled: true,
+
 	   axisY:{
 				  suffix: "ug/m3",
 				  title:'PM10 Pollution'
@@ -181,8 +183,10 @@ var middle=new Date().getTime();
 		minimum:2000,
 		maximum:57000
 	} ,
+	 exportEnabled: true,
+
      axisY:{
-       title: "Population Density",
+       title: "Population Density \\km2",
 	   minimum:-1500
   //     gridThickness: 1,
     //   tickLength: 10
