@@ -195,7 +195,11 @@ var middle=new Date().getTime();
       {
       legendText: "Size of Bubble Represents Average Daily PM10 Pollution",
       toolTipContent: "<strong>{city}</strong> <hr/>"+
-	  "GDP: {x}<br/> Population Density: {y} /km2<br/> Avg. Daily PM10: {z} ug/m3",
+	  "<span style=\"color:#85bb65;\">GDP: </span><b>{x}</b><br/> "+
+	  "<span style=\"color:#3399FF;\"> Population Density: </span><b>{y} "
+	  +"/km2</b><br/>"+
+	  "<span style=\"color:#6B6B47;\">Avg. Daily PM10: "+
+	  "</span><b>{z} ug/m3</b>",
 	  type: "bubble",
        showInLegend: true,
        legendMarkerType:"circle",
