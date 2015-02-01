@@ -81,7 +81,7 @@ makeGraph=function(){
 				  markerType:"none",
 				   showInLegend: true, 
 					name: cityname+'\t',
-					visible: 1===1? true : false,
+					visible: (cityname==='Paris' || cityname==='Skopje')? true : false,
                   dataPoints: cityReadings});
 		});
 		
