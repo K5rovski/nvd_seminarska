@@ -81,7 +81,7 @@ makeGraph=function(){
 				  markerType:"none",
 				   showInLegend: true, 
 					name: cityname+'\t',
-					visible: (cityname==='Skopje' || cityname==='Paris')? true : false,
+					visible: (cityname==='HongKong' || cityname==='London')? true : false,
                   dataPoints: cityReadings});
 		});
 		
